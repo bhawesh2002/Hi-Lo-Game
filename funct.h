@@ -36,8 +36,8 @@ int check()                                      //check's weather the number is
     }
     else if (assigned < random_number() - 2 || assigned > random_number() + 2)
     {
-        return 0;
         std::cout << "Far Away" << '\n';
+        return 0;
     }
     return 0;
 }
