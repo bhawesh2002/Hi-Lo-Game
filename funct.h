@@ -1,4 +1,4 @@
-//Header file containinng all function declaration's and definations
+//Header file containinng all function declaration's and defination's
 
 #include <iostream>
 
