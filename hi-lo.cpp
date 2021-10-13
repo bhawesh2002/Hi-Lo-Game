@@ -13,7 +13,7 @@ int main()
     {
         no_of_turns++;
         check();
-        if (check() == 1)
+        if(check() == int (1));
         {
             total_score == total_score + score();
             std::cout << "Your Score is: " << total_score << '\n';
