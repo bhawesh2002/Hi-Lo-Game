@@ -1,22 +1,22 @@
-//Header file containinng all function declaration's and definations 
+//Header file containinng all function declaration's and definations
 
 #include <iostream>
 
-int random_number()                               //pick up a random number(between 1-10) for the hi-lo game. First number is always 5
-{                                              
+int random_number() //pick up a random number(between 1-10) for the hi-lo game. First number is always 5
+{
     int random{5};
     return random;
 }
 
-int user_input()                                  //user input's a number
-{ 
+int user_input() //user input's a number
+{
     int i{};
     std::cout << "Your choice: ";
     std::cin >> i;
     return i;
 }
 
-int check()                                      //check's weather the number is correct, lo, high or far awary
+int check() //check's weather the number is correct, lo, high or far awary
 {
     int assigned{user_input()};
     if (assigned == random_number())
@@ -42,7 +42,7 @@ int check()                                      //check's weather the number is
     return 0;
 }
 
-int score()                            //count's the total score for the game 
+int score() //count's the total score for the game
 {
     int total{};
     if (check() == int(1))
@@ -52,7 +52,7 @@ int score()                            //count's the total score for the game
     return total;
 }
 
-int begin_game()                           //Ask's the user to enter the game  
+int begin_game() //Ask's the user to enter the game
 {
     std::cout << "=======================================================\n"
                  "Make a choice"
@@ -80,4 +80,26 @@ int begin_game()                           //Ask's the user to enter the game
         break;
     }
     return 0;
+}
+
+int in_game_opts()//open's in game option's after every guess
+{
+    std::cout << "======*In Game Options*=====\n"
+              << "1)continue guessing      2)Restart      3)Exit\n";
+    while (int opt{user_input()})
+    {
+        switch (opt)
+        {
+        case 1:
+            return opt;
+        case 0:
+            return opt;
+
+        default:
+            std::cout << "---------------------------------------\n"
+                      << "Make a valid choice"
+                      << "1)continue guessing      2)Restart      3)Exit\n";
+            break;
+        }
+    }
 }
