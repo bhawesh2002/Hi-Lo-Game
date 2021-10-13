@@ -39,7 +39,6 @@ int check() //check's weather the number is correct, lo, high or far awary
         std::cout << "Far Away" << '\n';
         return 0;
     }
-    return 0;
 }
 
 int score() //count's the total score for the game
