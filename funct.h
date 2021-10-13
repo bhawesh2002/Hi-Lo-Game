@@ -82,7 +82,7 @@ int begin_game() //Ask's the user to enter the game
     return 0;
 }
 
-int in_game_opts()//open's in game option's after every guess
+int in_game_opts() //open's in game option's after every guess
 {
     std::cout << "======*In Game Options*=====\n"
               << "1)continue guessing      2)Restart      3)Exit\n";
@@ -92,14 +92,14 @@ int in_game_opts()//open's in game option's after every guess
         {
         case 1:
             return opt;
-        case 0:
+        case 2:
             return opt;
-
+        case 3:
+            return opt;
         default:
-            std::cout << "---------------------------------------\n"
-                      << "Make a valid choice"
-                      << "1)continue guessing      2)Restart      3)Exit\n";
+            std::cout << "invalid input";
             break;
         }
     }
+    return 1;
 }

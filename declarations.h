@@ -9,3 +9,5 @@ int check();
 int score();
 
 int begin_game();
+
+int in_game_opts();
