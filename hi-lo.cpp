@@ -8,21 +8,8 @@ int main()
               << "2)You will get 4 outputs{\"bingo\",\"Hi\",\"Lo\",\"Far Away\"}\n";
     int no_of_turns{};                  //No of times the user has played the game
     int total_score{};                        //Score of the user
-    begin_game();
     random_number();
-    while (check() != int (1))
-    {
-        no_of_turns++;
-        user_input();
-        check();
-        if (check() == int (1))
-        {
-            total_score = total_score + score();
-            std::cout << "Your Score is: " << total_score << '\n';
-        }
-        
-    }
-    
+    int test {check()};
 
     return 0;
 }
