@@ -56,9 +56,9 @@ int begin_game() // Ask's the user to enter the game
               << '\n'
               << "1)Enter the Game\n"
               << "2)Exit\n";
-    while (int choice_1{user_input()})
+    while (int choice{user_input()})
     {
-        switch (choice_1)
+        switch (choice)
         {
         case 1:
             std::cout << "Welcome Abroad\n"
@@ -67,7 +67,7 @@ int begin_game() // Ask's the user to enter the game
             return true;
         case 2:
             std::cout << "****Thank You****" << '\n';
-            return 0;
+            return false;
             break;
         default:
             std::cout << "---------------------------------------\n"
