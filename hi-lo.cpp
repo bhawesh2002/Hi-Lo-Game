@@ -10,16 +10,13 @@ int main()
     int no_of_rounds{0}; // No of rounds user played on one go
     int total_score{};   // Score of the user
     int opt{1};          // default value of opt variable for in-game_opts
-    bool mark = false;
-    if (begin_game() == 1)
-    {
-        no_of_rounds++;
-    }        
-    while (mark != true)
+    bool mark_1 = begin_game();
+    bool mark_2 = false;    
+    while (mark_2 != true)
     {
         no_of_turns++;
-        mark = check();
-        if (mark == true)
+        mark_2 = check();
+        if (mark_2 == true)
         {
             std::cout << "Correct guess on " << no_of_turns << "th attempt" << '\n';            
         }
