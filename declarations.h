@@ -4,9 +4,9 @@ int random_number();
 
 int user_input();
 
-int check();
+int guess();
 
-int score();
+int check();
 
 int begin_game();
 
