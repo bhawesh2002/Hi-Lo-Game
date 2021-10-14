@@ -22,23 +22,24 @@ int check() //check's weather the number is correct, lo, high or far awary
     if (assigned == random_number())
     {
         std::cout << "Bingo" << '\n';
-        return 1;
+        return true;
     }
     else if (assigned == random_number() - 1 || assigned == random_number() - 2)
     {
         std::cout << "Low" << '\n';
-        return 0;
+        return false;
     }
     else if (assigned == random_number() + 1 || assigned == random_number() + 2)
     {
         std::cout << "High" << '\n';
-        return 0;
+        return false;
     }
     else if (assigned < random_number() - 2 || assigned > random_number() + 2)
     {
         std::cout << "Far Away" << '\n';
-        return 0;
+        return false;
     }
+    return 0;
 }
 
 int score() //count's the total score for the game

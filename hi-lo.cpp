@@ -9,11 +9,12 @@ int main()
     int no_of_turns{}; //No of times the user has played the game
     int total_score{}; //Score of the user
     int opt{1};        //default value of opt variable for in-game_opts
-    while (opt != 0)
+    begin_game();
+    while (check() != true)
     {
         no_of_turns++;
-        check();
         if(check() == int (1));
+        
         {
             total_score == total_score + score();
             std::cout << "Your Score is: " << total_score << '\n';
