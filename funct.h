@@ -63,13 +63,10 @@ int begin_game() // Ask's the user to enter the game
         case 1:
             std::cout << "Welcome Abroad\n"
                       << "-------Start Makiing Guess-------\n";
-            return true;
-            break;
-            
+            return true;            
         case 2:
             std::cout << "*****Thank You*****" << '\n';
             return false;
-            break;
         default:
             std::cout << "---------------------------------------\n"
                       << "Make a Valid Choice" << '\n'
