@@ -62,9 +62,10 @@ int begin_game() // Ask's the user to enter the game
         {
         case 1:
             std::cout << "Welcome Abroad\n"
-                      << "====Make a Guess====\n";
-            break;
+                      << "-------Start Makiing Guess-------\n";
             return true;
+            break;
+            
         case 2:
             std::cout << "****Thank You****" << '\n';
             return false;
@@ -91,7 +92,7 @@ int in_game_opts() // open's in game option's after every guess
         {
         case 1:
             std::cout << "=========Next Round=========\n";
-            continue;
+            return opt;
         case 2:
             return opt;
         case 3:
