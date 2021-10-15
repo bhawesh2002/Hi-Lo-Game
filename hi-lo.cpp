@@ -30,7 +30,7 @@ int main()
         {
             total_score++;
             std::cout << "No of Round's Played: " << no_of_rounds << '\n';
-            std::cout << "Correct guess on " << no_of_turns << "th attempt" << '\n';
+            std::cout << "No of Attempt's: " << no_of_turns << '\n';
             std::cout << "Your score is " << total_score << '\n';
             opt = in_game_opts();
             switch (opt)
@@ -38,12 +38,15 @@ int main()
             case 1:
                 no_of_rounds++;
                 std::cout << "=-=-=-=-=-ROUND" << no_of_rounds << "-=-=-=-=-=\n";
+                mark_2 = false; // Reset value of mark_2 variable
                 continue;
             case 2:
                 std::cout << "<<<<<<<Restarting>>>>>>\n";
-                no_of_rounds = 0;
+                no_of_rounds = 1;
+                std::cout << "=-=-=-=-=-ROUND" << no_of_rounds << "-=-=-=-=-=\n";
                 no_of_turns = 0;
                 total_score = 0;
+                mark_2 = false; // Reset value of mark_2 variable
                 continue;
             case 3:
                 std::cout << "*****Thank You*****" << '\n';
