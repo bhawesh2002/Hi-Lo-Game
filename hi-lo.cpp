@@ -28,22 +28,28 @@ int main()
         mark_2 = check();
         if (mark_2 == true)
         {
+            total_score++;
+            std::cout << "No of Round's Played: " << no_of_rounds << '\n';
             std::cout << "Correct guess on " << no_of_turns << "th attempt" << '\n';
+            std::cout << "Your score is " << total_score << '\n';
             opt = in_game_opts();
-            if (opt == 1)
+            switch (opt)
             {
+            case 1:
                 no_of_rounds++;
                 std::cout << "=-=-=-=-=-ROUND" << no_of_rounds << "-=-=-=-=-=\n";
                 continue;
-            }
-            else if (opt == 2)
-            {
+            case 2:
                 std::cout << "<<<<<<<Restarting>>>>>>\n";
                 no_of_rounds = 0;
                 no_of_turns = 0;
                 total_score = 0;
+                continue;
+            case 3:
+                std::cout << "*****Thank You*****" << '\n';
+                return 0;
             }
         }
+        return 0;
     }
-    return 0;
 }
