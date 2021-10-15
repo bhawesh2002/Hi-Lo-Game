@@ -67,7 +67,7 @@ int begin_game() // Ask's the user to enter the game
             break;
             
         case 2:
-            std::cout << "****Thank You****" << '\n';
+            std::cout << "*****Thank You*****" << '\n';
             return false;
             break;
         default:
