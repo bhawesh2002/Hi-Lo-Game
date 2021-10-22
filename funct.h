@@ -5,7 +5,7 @@
 
 int random_number() // pick up a random number(between 1-10) for the hi-lo game. First number is always 5
 {
-    int random {rand() % 10 + 1};
+    int random{rand() % 10 + 1};
     return random;
 }
 
@@ -26,26 +26,27 @@ int guess() // user make's a guess
 }
 int check() // ask's to make a guess and check's weather the number is correct, lo, high or far awary
 {
-    int assigned{guess()};
-    if (assigned == random_number())
+    int assigned{};
+    int num = random_number();
+    while (assigned = guess())
     {
-        std::cout << "Bingo" << '\n';
-        return true;
-    }
-    else if (assigned == random_number() - 1 || assigned == random_number() - 2)
-    {
-        std::cout << "Low" << '\n';
-        return false;
-    }
-    else if (assigned == random_number() + 1 || assigned == random_number() + 2)
-    {
-        std::cout << "High" << '\n';
-        return false;
-    }
-    else if (assigned < random_number() - 2 || assigned > random_number() + 2)
-    {
-        std::cout << "Far Away" << '\n';
-        return false;
+        if (assigned == num)
+        {
+            std::cout << "Bingo" << '\n';
+            return true;
+        }
+        else if (assigned == num - 1 || assigned == num - 2)
+        {
+            std::cout << "Low" << '\n';
+        }
+        else if (assigned == num + 1 || assigned == num + 2)
+        {
+            std::cout << "High" << '\n';
+        }
+        else if (assigned < num - 2 || assigned > num + 2)
+        {
+            std::cout << "Far Away" << '\n';
+        }
     }
     return 0;
 }
@@ -64,7 +65,7 @@ int begin_game() // Ask's the user to enter the game
         case 1:
             std::cout << "Welcome Abroad\n"
                       << "-------Start Makiing Guess-------\n";
-            return true;            
+            return true;
         case 2:
             std::cout << "*****Thank You*****" << '\n';
             return false;

@@ -30,8 +30,8 @@ int main()
         {
             total_score++;
             std::cout << "No of Round's Played: " << no_of_rounds << '\n';
-            std::cout << "No of Attempt's: " << no_of_turns << '\n';
-            std::cout << "Your score is " << total_score << '\n';
+            std::cout << "No of Attempt's(This Round): " << no_of_turns << '\n';
+            std::cout << "Your Score is " << total_score << '\n';
             opt = in_game_opts();
             switch (opt)
             {
