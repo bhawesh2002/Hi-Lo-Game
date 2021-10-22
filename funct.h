@@ -1,10 +1,11 @@
 // Header file containinng all function declaration's and defination's
 
 #include <iostream>
+#include <cstdlib>
 
 int random_number() // pick up a random number(between 1-10) for the hi-lo game. First number is always 5
 {
-    int random{5};
+    int random {rand() % 10 + 1};
     return random;
 }
 
